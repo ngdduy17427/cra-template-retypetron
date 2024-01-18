@@ -1,0 +1,70 @@
+{
+  "package": {
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    },
+    "scripts": {
+      "start": "react-scripts start",
+      "build": "react-scripts build",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject",
+      "electron": "electron ./build/electron.js",
+      "electron-build": "run-s electron-prebuild build",
+      "electron-dist-app": "run-s electron-build && npx electron-builder",
+      "electron-prebuild": "run-s prebuild-preload prebuild-electron",
+      "prebuild-preload": "tsc ./src/Electron/preload.ts && copyfiles -u 2 ./src/Electron/preload.js ./public && rimraf ./src/Electron/preload.js",
+      "prebuild-electron": "tsc ./src/Electron/electron.ts && copyfiles -u 2 ./src/Electron/electron.js ./public && rimraf ./src/Electron/electron.js",
+      "clean": "rimraf ./public/preload.js ./public/electron.js ./build ./dist"
+    },
+    "eslintConfig": {
+      "extends": [
+        "react-app"
+      ]
+    },
+    "homepage": ".",
+    "main": "build/electron.js",
+    "devDependencies": {
+      "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+      "@types/node": "^20.2.1",
+      "@types/react": "^18.2.6",
+      "@types/react-dom": "^18.2.4",
+      "@typescript-eslint/parser": "^5.62.0",
+      "copyfiles": "^2.4.1",
+      "electron": "^28.0.0",
+      "electron-builder": "^24.9.1",
+      "eslint": "^8.55.0",
+      "eslint-config-prettier": "^9.1.0",
+      "eslint-plugin-prettier": "^5.0.1",
+      "eslint-plugin-react-hooks": "^4.6.0",
+      "npm-run-all": "^4.1.5",
+      "prettier": "^3.1.1",
+      "react-scripts": "^5.0.1",
+      "sass": "^1.69.5",
+      "tailwindcss": "^3.3.3",
+      "typescript": "^5.0.4"
+    },
+    "overrides": {
+      "typescript": "$typescript"
+    },
+    "build": {
+      "appId": "react.electron.app",
+      "buildVersion": "1",
+      "extends": null,
+      "directories": {
+        "output": "dist"
+      },
+      "files": [
+        "build/**/*",
+        "node_modules/**/*"
+      ],
+      "win": {
+        "target": [
+          "appx",
+          "msi"
+        ],
+        "icon": "./build/logo512.png"
+      }
+    }
+  }
+}

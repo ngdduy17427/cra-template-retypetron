@@ -1,0 +1,52 @@
+{
+  "name": "cra-template-retypetron",
+  "description": "Create React Typescript Tailwindcss Electron App.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": [
+    "create-react-app",
+    "react",
+    "electron",
+    "typescript",
+    "tailwindcss",
+    "template"
+  ],
+  "author": "ngdduy17427",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ngdduy17427/cra-template-retypetron.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ngdduy17427/cra-template-retypetron/issues"
+  },
+  "readme": "README.md",
+  "files": [
+    "template",
+    "template.json"
+  ],
+  "main": "template.json",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@types/node": "^20.2.1",
+    "@types/react": "^18.2.6",
+    "@types/react-dom": "^18.2.4",
+    "@typescript-eslint/parser": "^5.62.0",
+    "copyfiles": "^2.4.1",
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^3.1.1",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.69.5",
+    "tailwindcss": "^3.3.3",
+    "typescript": "^5.0.4"
+  }
+}
