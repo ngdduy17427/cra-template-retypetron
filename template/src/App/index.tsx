@@ -1,13 +1,13 @@
 import logo from "Common/Assets/SVG/logo.svg";
 import { FC, useEffect } from "react";
-import "./index.scss";
+import "./App.scss";
 
 const App: FC = () => {
   useEffect(() => {
     if (!window.electronAPI) return;
 
     window.electronAPI.send("HelloWorld");
-    window.electronAPI.receive("HelloWorld", (_: any, result: any) => {
+    window.electronAPI.receive("HelloWorld", (_: Electron.IpcRendererEvent, result: any) => {
       console.log(result.message);
 
       window.electronAPI.removeAllListeners("selectDir");

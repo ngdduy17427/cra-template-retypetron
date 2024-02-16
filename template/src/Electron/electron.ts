@@ -1,4 +1,4 @@
-import { app, BrowserWindow, ipcMain } from "electron";
+import { app, BrowserWindow, ipcMain, IpcMainEvent } from "electron";
 import * as path from "node:path";
 import * as url from "node:url";
 
@@ -17,7 +17,7 @@ const createWindow = () => {
     } as Electron.WebPreferences,
   });
 
-  ipcMain.on("HelloWorld", async (_, __) => {
+  ipcMain.on("HelloWorld", async (_: IpcMainEvent, __: any[]) => {
     mainWindow?.webContents.send("HelloWorld", { message: "Hello World" });
   });
 
@@ -37,7 +37,7 @@ const createWindow = () => {
   mainWindow.on("closed", () => {
     mainWindow = null;
   });
-  
+
   mainWindow.maximize();
   mainWindow.show();
 };

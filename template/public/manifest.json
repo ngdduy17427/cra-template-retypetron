@@ -1,6 +1,6 @@
 {
-  "short_name": "React Typescript Tailwindcss Electron App",
-  "name": "React Typescript Tailwindcss Electron App",
+  "short_name": "React Typescript Electron App",
+  "name": "React Typescript Electron App",
   "icons": [
     {
       "src": "favicon.ico",
