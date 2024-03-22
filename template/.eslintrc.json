@@ -3,13 +3,13 @@
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:tailwindcss/recommended",
-    "plugin:prettier/recommended",
+    "plugin:tailwindcss/recommended"
   ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react", "react-hooks", "tailwindcss", "prettier"],
+  "plugins": ["@typescript-eslint", "prettier", "react", "react-hooks", "tailwindcss"],
   "rules": {
     "@typescript-eslint/member-delimiter-style": "error",
     "@typescript-eslint/no-explicit-any": "off",
@@ -27,6 +27,11 @@
     "tailwindcss/migration-from-tailwind-2": "off",
     "tailwindcss/no-custom-classname": "off",
     "tailwindcss/classnames-order": "off",
-    "prettier/prettier": "off",
+    "prettier/prettier": "off"
   },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

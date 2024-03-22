@@ -1,6 +1,6 @@
-import logo from "Common/Assets/SVG/logo.svg";
+import logo from "assets/svgs/logo.svg";
 import { FC, useEffect } from "react";
-import "./App.scss";
+import "./css.scss";
 
 const App: FC = () => {
   useEffect(() => {

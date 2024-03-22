@@ -1,6 +1,6 @@
 # Create React Typescript Electron App
 
-### <p align="center">Based Typescript template for React Electron application</p>
+### Based Typescript template for React Electron application
 
 [![Package Quality](https://packagequality.com/shield/cra-template-retypetron.svg)](https://packagequality.com/#?package=cra-template-retypetron)
 [![NPM version](https://badge.fury.io/js/cra-template-retypetron.svg)](https://www.npmjs.com/package/cra-template-retypetron)
@@ -33,6 +33,8 @@ npm run electron
 ```bash
 npm run electron:build
 ```
+
+- After that, you can find your myapp.msi in folder `dist`
 
 # Related Projects
 
