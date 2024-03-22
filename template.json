@@ -13,8 +13,8 @@
       "electron:start": "run-s prebuild:file && electron ./public/electron.js",
       "electron:build": "run-s prebuild:file && react-scripts build && npx electron-builder",
       "prebuild:file": "run-s prebuild:preload prebuild:electron",
-      "prebuild:preload": "tsc ./src/Electron/preload.ts && copyfiles -u 2 ./src/Electron/preload.js ./public && rimraf ./src/Electron/preload.js",
-      "prebuild:electron": "tsc ./src/Electron/electron.ts && copyfiles -u 2 ./src/Electron/electron.js ./public && rimraf ./src/Electron/electron.js",
+      "prebuild:preload": "tsc ./src/electron/preload.ts && copyfiles -u 2 ./src/electron/preload.js ./public && rimraf ./src/electron/preload.js",
+      "prebuild:electron": "tsc ./src/electron/electron.ts && copyfiles -u 2 ./src/electron/electron.js ./public && rimraf ./src/electron/electron.js",
       "clean": "rimraf ./public/preload.js ./public/electron.js ./build ./dist"
     },
     "eslintConfig": {

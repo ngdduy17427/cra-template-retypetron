@@ -10,7 +10,7 @@ const App: FC = () => {
     window.electronAPI.receive("HelloWorld", (_: Electron.IpcRendererEvent, result: any) => {
       console.log(result.message);
 
-      window.electronAPI.removeAllListeners("selectDir");
+      window.electronAPI.removeAllListeners("HelloWorld");
     });
   }, []);
 

@@ -1,5 +1,11 @@
 import { contextBridge, ipcRenderer, IpcRendererEvent } from "electron";
 
+declare global {
+  interface Window {
+    electronAPI: IElectronAPI;
+  }
+}
+
 interface IElectronAPI {
   send: (channel: string, ...args: any[]) => Promise<void>;
   receive: (
@@ -7,12 +13,6 @@ interface IElectronAPI {
     callback: (event: IpcRendererEvent, ...args: any[]) => void
   ) => Promise<void>;
   removeAllListeners: (channel: string) => Promise<void>;
-}
-
-declare global {
-  interface Window {
-    electronAPI: IElectronAPI;
-  }
 }
 
 const validChannels = ["HelloWorld"];
